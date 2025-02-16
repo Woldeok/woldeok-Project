@@ -22,7 +22,13 @@ h1 {
     margin-bottom: 10px;
 }
 
-input {
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+select, input {
     width: 90%;
     padding: 10px;
     margin: 5px 0;
@@ -46,32 +52,6 @@ button {
 
 button:hover {
     background: #ff4f7b;
-}
-
-#mealResult {
-    margin-top: 15px;
-    text-align: center;
-}
-
-.meal-card {
-    background: #fff7f9;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-top: 10px;
-}
-
-.meal-card h3 {
-    color: #ff4f7b;
-    font-size: 18px;
-    margin-bottom: 5px;
-}
-
-.meal-item {
-    font-size: 16px;
-    color: #555;
-    padding: 5px 0;
-    border-bottom: 1px solid #eee;
 }
 
 .hidden {
