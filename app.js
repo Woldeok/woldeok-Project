@@ -3,6 +3,8 @@ const express = require("express");
 const axios = require("axios");
 const cors = require("cors");
 const path = require("path"); // ✅ path 모듈 추가
+const db = require("./db");
+const backup = require("./backup");
 
 const app = express();
 const PORT = 3000;
@@ -75,8 +77,6 @@ app.get("/api/school", async (req, res) => {
         res.status(500).json({ error: error.message });
     }
 });
-
-
 
 // 2️⃣ 급식 정보 조회 API
 app.get("/api/meal", async (req, res) => {

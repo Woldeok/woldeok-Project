@@ -2,8 +2,8 @@ async function fetchSchoolCode() {
     const educationOfficeCode = document.getElementById("educationOffice").value;
     const schoolName = document.getElementById("schoolName").value;
 
-    if (!educationOfficeCode) return alert("📌 교육청을 선택하세요.");
-    if (!schoolName) return alert("📌 학교명을 입력하세요.");
+    if (!educationOfficeCode) return alert("교육청을 선택하세요.");
+    if (!schoolName) return alert("학교명을 입력하세요.");
 
     try {
         const response = await fetch(`/api/school?educationOfficeCode=${educationOfficeCode}&schoolName=${schoolName}`);
@@ -13,17 +13,14 @@ async function fetchSchoolCode() {
             localStorage.setItem("educationOfficeCode", data.educationOfficeCode);
             localStorage.setItem("schoolCode", data.schoolCode);
             document.getElementById("mealContainer").classList.remove("hidden");
-            alert("✅ 학교 코드가 설정되었습니다. 기간을 선택하고 급식을 조회하세요.");
+            alert("학교 코드가 설정되었습니다. 기간을 선택하고 급식을 조회하세요.");
         } else {
-            // ✅ 사용자가 선택한 교육청에 학교가 없을 경우, 다른 교육청 확인 요청
-            alert(`⚠️ 선택한 교육청(${educationOfficeCode})에 해당 학교가 없습니다.\n\n다른 교육청을 선택하여 다시 검색해 보세요.`);
+            alert("학교를 찾을 수 없습니다.");
         }
     } catch (error) {
-        alert("❌ 오류 발생: " + error.message);
+        alert("오류 발생: " + error.message);
     }
 }
-
-
 
 async function fetchWeeklyMeal() {
     const educationOfficeCode = localStorage.getItem("educationOfficeCode");
