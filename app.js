@@ -6,7 +6,7 @@ const path = require("path"); // ✅ path 모듈 추가
 const db = require("./db");
 const backup = require("./backup");
 const app = express();
-const PORT = 3000;
+const PORT = 8080;
 const API_KEY = process.env.API_KEY; // .env에서 API 키 불러오기
 
 app.use(cors());

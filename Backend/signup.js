@@ -13,7 +13,7 @@ router.get("/%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85", (req, res) => {
 });
 router.post('/signup', async (req, res) => {
     const { id, email, password } = req.body;
-
+    console.log("✅ signup 회원가입시도");
     if (!id || !email || !password) {
         return res.status(400).json({ message: '아이디, 이메일, 비밀번호를 입력하세요.' });
     }
