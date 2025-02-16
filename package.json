@@ -1,0 +1,11 @@
+{
+  "name": "woldeok-project",
+  "version": "0.0.1",
+  "description": "��#\u0000��U�-\u0000\u0004�\\�\u001dȸ�\r\u0000 \u0000",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
