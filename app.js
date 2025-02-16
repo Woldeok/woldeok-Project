@@ -5,7 +5,6 @@ const cors = require("cors");
 const path = require("path"); // ✅ path 모듈 추가
 const db = require("./db");
 const backup = require("./backup");
-
 const app = express();
 const PORT = 3000;
 const API_KEY = process.env.API_KEY; // .env에서 API 키 불러오기
@@ -19,6 +18,12 @@ const MEAL_API_URL = "https://open.neis.go.kr/hub/mealServiceDietInfo";
 
 // ✅ 서버 실행 로그
 console.log("✅ 서버 시작됨");
+
+const signupRouter = require('./Backend/signup'); // 라우터 가져오기
+app.use('/', signupRouter); // '/signup' 경로에 라우터 적용
+const Login = require('./Backend/Login'); // 라우터 가져오기
+app.use('/', Login); // '/signup' 경로에 라우터 적용
+
 
 // ✅ 모든 요청에 대해 로그 출력하는 미들웨어
 app.use((req, res, next) => {
