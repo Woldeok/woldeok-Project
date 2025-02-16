@@ -1,0 +1,79 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 350px;
+}
+
+h1 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+}
+
+button {
+    background: #ff7eb3;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #ff4f7b;
+}
+
+#mealResult {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.meal-card {
+    background: #fff7f9;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+}
+
+.meal-card h3 {
+    color: #ff4f7b;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.meal-item {
+    font-size: 16px;
+    color: #555;
+    padding: 5px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.hidden {
+    display: none;
+}
